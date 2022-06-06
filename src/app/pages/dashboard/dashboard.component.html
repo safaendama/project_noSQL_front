@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">The average price per storage</h5>
+        <p class="card-category"></p>
+      </div>
+      <div class="card-body">
+        <plotly-plot
+          *ngIf="storagegraph"
+          [data]="storagegraph.data"
+          [layout]="storagegraph.layout"
+          [useResizeHandler]="true"
+        ></plotly-plot>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Brand popularity</h5>
+        <p class="card-category"></p>
+      </div>
+      <div class="card-body">
+        <plotly-plot
+          *ngIf="brandpricegraph"
+          [data]="brandpricegraph.data"
+          [layout]="brandpricegraph.layout"
+          [useResizeHandler]="true"
+        ></plotly-plot>
+      </div>
+      <div class="card-footer">
+        <hr />
+        <div class="stats">
+          <i class="fa fa-history"></i> Updated 3 minutes ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
